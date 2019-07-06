@@ -7,7 +7,7 @@
     tools:context=".DisplayActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/personRecycler"
+        android:id="@+id/Recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

@@ -2,10 +2,12 @@ package com.example.realmdb;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,6 +21,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewholder> {
     private RealmResults<Student> mPersonRealmResults;
     private int count =0;
     private Context mContext;
+
 
     public MyAdapter(RealmResults<Student> students, Context context){
         mPersonRealmResults = students;
@@ -41,6 +44,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewholder> {
         holder.roll.setText("Roll No. : "+ String.valueOf(student.getRollno()));
         holder.phone.setText(String.valueOf(student.getPhn()));
         holder.gender.setText(student.getGender());
+
+
+
+
     }
 
     @Override
@@ -49,7 +56,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewholder> {
     }
 
     public class MyViewholder extends RecyclerView.ViewHolder {
-        
+            private RelativeLayout r1;
             private TextView name;
             private TextView dept;
             private TextView phone;
@@ -58,12 +65,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewholder> {
          public MyViewholder(@NonNull View itemView) {
                 super(itemView);
                 count++;
+                int s = count%3;
                 Log.i( TAG, "MyViewHolder: Number of Active ViewHolders:" + count);
                 name = itemView.findViewById(R.id.name);
                 dept = itemView.findViewById(R.id.dept);
                 roll = itemView.findViewById(R.id.roll);
                 phone = itemView.findViewById(R.id.phn);
                 gender = itemView.findViewById(R.id.gender);
+                r1 = itemView.findViewById(R.id.category_image);
+                if(s==0)
+                    r1.setBackgroundColor(Color.BLUE);
+                else if (s==1)
+                    r1.setBackgroundColor(Color.RED);
+                else
+                    r1.setBackgroundColor(Color.MAGENTA);
+
+
             }
         }
     }

@@ -18,7 +18,7 @@ public class DisplayActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
-         mRecyclerView = findViewById(R.id.personRecycler);
+         mRecyclerView = findViewById(R.id.Recycler_view);
         
         Realm realm = Realm.getDefaultInstance();
         RealmResults<Student> personRealmResults = realm.where(Student.class).findAll();

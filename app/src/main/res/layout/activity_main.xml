@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#97DF9A"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#03A9F4"
         android:text="Enter the details of Student"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -36,7 +38,7 @@
         android:id="@+id/textView3"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Dept          :"
+        android:text="Dept        :"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,6 +90,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#8BC34A"
         android:onClick="onSave"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -101,8 +104,9 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Display Records"
+        android:background="#2196F3"
         android:onClick="onDisplay"
+        android:text="Display Records"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -196,12 +200,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="onSwitch"
+        android:switchMinWidth="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584"
-        android:switchMinWidth="70dp" />
+        app:layout_constraintVertical_bias="0.584" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
